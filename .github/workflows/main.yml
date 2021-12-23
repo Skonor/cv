@@ -13,3 +13,10 @@ jobs:
         with:
           name: cv.pdf
           path: ./result/cv_7.pdf
+
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v7.5.0
+	with:
+	  add: 'cv.pdf'
+	  branch: cv_pdf
+	  message: 'update cv'
