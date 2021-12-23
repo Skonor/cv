@@ -19,3 +19,4 @@ jobs:
           add: './cv.pdf'
           branch: cv_pdf
           message: 'update cv'
+          push: 'origin cv_pdf'
