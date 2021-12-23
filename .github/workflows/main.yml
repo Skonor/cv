@@ -1,0 +1,15 @@
+on: [push]
+jobs:
+  Explore-GitHub-Actions:	
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build . --file Dockerfile --tag resume
+      - run: sudo docker run --name=resume resume
+      - run: mkdir -p result
+      - run: sudo docker cp resume:code/cv_7.pdf ./result/
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: cv.pdf
+          path: ./result/cv_7.pdf
