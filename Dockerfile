@@ -16,4 +16,4 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 
 COPY src/ /code
 WORKDIR /code
-RUN [ "pdflatex", "cv_7.tex", "-interaction=nonstopmode" ]
+RUN [ "pdflatex", "cv.tex", "-interaction=nonstopmode" ]
