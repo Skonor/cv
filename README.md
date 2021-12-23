@@ -1,5 +1,5 @@
 # Горбунов Михаил Андреевич 202 группа
-https://skonor.github.io/cv/result/cv.pdf\
+https://skonor.github.io/cv/result/cv.pdf  
 Анекдот:\
 Армянин решил баллотироваться в горсовет. В регистратуре: 
 - Род деятельности? 
