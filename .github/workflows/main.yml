@@ -3,6 +3,12 @@ jobs:
   Compile-tex:	
     runs-on: ubuntu-latest
     steps:
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v7.5.0
+        with:
+          remove: 'cv.pdf'
+          branch:  cv_pdf
+          message: 'deleted old cv'
       - uses: actions/checkout@v2
       - run: docker build . --file Dockerfile --tag resume
       - run: sudo docker run --name=resume resume 
@@ -19,4 +25,3 @@ jobs:
           add: './cv.pdf'
           branch: cv_pdf
           message: 'update cv'
-          push: 'origin cv_pdf'
