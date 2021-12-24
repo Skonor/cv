@@ -12,6 +12,7 @@ jobs:
         with:
           branch: cv_pdf
           message: 'deleted old pdf'
+      - uses: actions/checkout@v2
       - run: docker build . --file Dockerfile --tag resume
       - run: sudo docker run --name=resume resume 
       - run: sudo docker cp resume:code/cv.pdf ./
